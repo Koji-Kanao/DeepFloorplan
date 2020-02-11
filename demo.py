@@ -34,7 +34,7 @@ floorplan_map = {
 def ind2rgb(ind_im, color_map=floorplan_map):
 	rgb_im = np.zeros((ind_im.shape[0], ind_im.shape[1], 3))
 
-	for i, rgb in color_map.iteritems():
+	for i, rgb in color_map.items():
 		rgb_im[(ind_im==i)] = rgb
 
 	return rgb_im
@@ -53,7 +53,7 @@ def main(args):
 					tf.local_variables_initializer()))
 
 		# restore pretrained model
-		saver = tf.train.import_meta_graph('./pretrained/pretrained_r3d.meta')
+		saver = tf.train.import_meta_graph('./pretrained/pretrained_r3d.meta', clear_devices=True)
 		saver.restore(sess, './pretrained/pretrained_r3d')
 
 		# get default graph

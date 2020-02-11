@@ -1,0 +1,7 @@
+
+dataset/r3d.tfrecords
+pretrained/checkpoint
+pretrained/pretrained_r3d.data-00000-of-00001
+pretrained/pretrained_r3d.index
+pretrained/pretrained_r3d.meta
+pretrained_r3d.zip
